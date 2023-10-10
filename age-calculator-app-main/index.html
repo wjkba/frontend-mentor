@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="zbase.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="grid-center">
+      <form class="form-calculator">
+        <div class="form-content">
+          <div class="input-container">
+            <div class="input-box">
+              <label>DAY</label>
+              <input maxlength="2" placeholder="DD" id="inputDay" />
+              <div class="error">
+                <label class="labelError">error!</label>
+              </div>
+            </div>
+            <div class="input-box">
+              <label>MONTH</label>
+              <input maxlength="2" placeholder="MM" id="inputMonth" />
+              <div class="error">
+                <label class="labelError">error!</label>
+              </div>
+            </div>
+            <div class="input-box">
+              <label>YEAR</label>
+              <input maxlength="4" placeholder="YYYY" id="inputYear" />
+              <div class="error">
+                <label class="labelError">error!</label>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button><img src="assets/images/icon-arrow.svg" alt="" /></button>
+          </div>
+
+          <div class="result">
+            <div class="result__year">
+              <span>--</span>
+              <label>years</label>
+            </div>
+            <div class="result__month">
+              <span>--</span>
+              <label>months</label>
+            </div>
+            <div class="result__day">
+              <span>--</span>
+              <label>days</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/wjkba">wjkba</a>.
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
