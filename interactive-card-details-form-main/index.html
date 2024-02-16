@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+
+<div class="main-wrapper">
+  <img src="images/bg-main-desktop.png" alt="">
+  <div class="main">
+    <div class="content">
+      <div class="content__left">
+        <div class="card-front">
+          <img src="images/card-logo.svg" alt="">
+          <p id="front__Number">1234 1234 1234 1234</p>
+          <div class="flex-between">
+            <p id="front__Name">JAN KOWALSKI</p>
+            <p id="front__Date">12/24</p>
+          </div>
+        </div>
+        <div class="card-back">
+        <p id="back_CVC">123</p>
+        </div>
+      </div>
+      <div class="content__right">
+        <form class="card__details">
+          <div class="details__input">
+            <label for="">CARDHOLDER NAME</label>
+            <input placeholder="e.g. JAN KOWALSKI" id="inputName" type="text">
+          </div>
+          <div class="details__input">
+            <label for="">CARD NUMBER</label>
+            <input placeholder="e.g. 1234 5678 9123 000" id="inputNumber" type="text" maxlength="19">
+          </div>
+          <div class="flex">
+            <div class="details__input">
+              <label for="">EXP. DATE (MM/YY)</label>
+              <div class="flex-exp">
+                <input placeholder="MM" id="inputMonth" type="text" maxlength="2">
+                <input placeholder="YY" id="inputYear" type="text" maxlength="2">
+              </div>
+            </div>
+            <div class="details__input">
+              <label for="">CVC</label>
+              <input placeholder="e.g. 123" id="inputCVC" type="text" maxlength="3">
+            </div>
+          </div>
+          <button class="btnPurple" id="btnConfirm">Confirm</button>
+        </form>
+        <div class="card__details card__message">
+          <img src="images/icon-complete.svg" alt="">
+          <p>THANK YOU!</p>
+          <p>We've added your card details</p>
+          <button class="btnPurple" id="btnContinue">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
