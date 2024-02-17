@@ -1,2 +1,2 @@
 # Frontend Mentor
-https://glowing-daifuku-f9348c.netlify.app/
+https://wjkba.github.io/frontend-mentor/
