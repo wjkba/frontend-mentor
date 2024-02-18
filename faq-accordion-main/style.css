@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  margin: 0;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.main-wrapper > img {
+  position: absolute;
+  z-index: -10;
+  min-width: 100%;
+}
+
+.main {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.card-content {
+  font-family: "Work Sans", sans-serif;
+}
+.head {
+  display: flex;
+}
+.head img {
+  margin-right: 1rem;
+}
+.card-content h1 {
+  color: hsl(292, 42%, 14%);
+  font-weight: 700;
+  font-size: 3rem;
+  user-select: none;
+}
+
+.card-content h2 {
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  font-size: 20px;
+  user-select: none;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: hsl(292, 16%, 49%);
+}
+
+/* QUESTIONS */
+
+.question__header {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: greenyellow; */
+}
+
+.question__header img {
+  margin-left: 1rem;
+  margin-right: 0.4rem;
+}
+
+.question__header:hover {
+  cursor: pointer;
+}
+
+.question__header:hover h2 {
+  cursor: pointer;
+  color: #b333ec;
+}
+
+.question__answer {
+  display: none;
+  opacity: 0;
+}
+
+.question__answer--expand {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 730px) {
+  .card {
+    width: auto;
+  }
+}
