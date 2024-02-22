@@ -1,0 +1,262 @@
+body {
+  background-color: #f7f7ff;
+}
+
+#bg-top {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  transform: translateX(10rem) translateY(-2rem);
+}
+#bg-bottom {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+.content__top {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.content__top h2 {
+  color: hsl(233, 13%, 49%);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.content__top label {
+  color: hsl(234, 14%, 74%);
+  font-weight: 600;
+}
+
+.top__head h2 {
+  color: #6a6b77;
+}
+
+.toggle {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid black;
+}
+
+/* CARDS */
+
+.content__cards {
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 0.5rem;
+}
+.card--topoffer {
+  background: linear-gradient(
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
+}
+.card--topoffer * {
+  color: white;
+}
+.card--topoffer button {
+  color: rgba(105, 111, 221);
+  background: none;
+  background-color: white;
+}
+.card--topoffer button:hover {
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+.card__offer {
+  display: grid;
+  place-items: center;
+  color: hsl(232, 13%, 33%);
+}
+.card__offer h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.card__offer h1 {
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.offer__info p {
+  font-size: 1rem !important;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px hsla(234, 14%, 74%, 0.475) solid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.offer__info:nth-child(3) {
+  border-bottom: 1px hsla(234, 14%, 74%, 0.475) solid;
+  margin-bottom: 1.5rem;
+}
+.offer__price {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.offer__price span {
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  margin-right: 0.3rem;
+}
+.card__offer p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.offer__info {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+}
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: hsl(234, 14%, 74%);
+}
+
+.btn {
+  padding: 0.6rem;
+  border: 0;
+  margin: 1px;
+  border-radius: 0.3rem;
+  background: rgb(163, 168, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
+  color: white;
+  padding: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  margin: 0;
+  background: none;
+  background-color: #ffffff;
+  color: rgba(105, 111, 221);
+  border: 1px solid rgba(105, 111, 221);
+}
+
+/* TOGGLE */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(163, 168, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media (min-width: 1040px) {
+  main {
+    height: 100vh;
+  }
+  .content__top {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+  .cards {
+    flex-direction: row;
+    gap: 0;
+  }
+  .card--topoffer {
+    width: 100%;
+    position: relative;
+    transform: scale(1.05, 1.15);
+    z-index: 10;
+  }
+  #bg-top {
+    transform: translate(0);
+  }
+  #bg-bottom {
+    display: block;
+  }
+}
