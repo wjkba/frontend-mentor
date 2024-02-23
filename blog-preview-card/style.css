@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+* {
+  font-family: "Figtree", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--yellow);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 1.4rem;
+  max-width: 24rem;
+  max-height: fit-content;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+}
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.card img {
+  border-radius: 1rem;
+  max-width: fit-content;
+}
+.card > p {
+  color: var(--grey);
+  line-height: 1.4rem;
+}
+
+#learning {
+  display: grid;
+  place-items: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  background-color: var(--yellow);
+  font-size: 1rem;
+  max-width: 5.8rem;
+  /* max-height: 2.2rem; */
+  padding: 0.4rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
+}
+
+.author {
+  display: flex;
+  place-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.author img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.author p {
+  font-weight: 800;
+}
+@media (max-width: 450px) {
+  .card {
+    max-width: 24rem;
+  }
+  .card img {
+    max-width: 100%;
+  }
+}
