@@ -1,0 +1,338 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+nav img {
+  max-width: 3rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+nav li {
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+nav li:hover {
+  color: hsl(5, 85%, 63%);
+}
+.nav {
+  position: relative;
+  margin: auto;
+}
+.nav__list {
+  display: none;
+}
+.nav__list-mobile--show ul {
+  margin-top: 10rem;
+  line-height: 5rem;
+}
+.nav__list-mobile--show {
+  display: block;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70vw;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-size: 2rem;
+}
+.nav__list-mobile--show img {
+  float: right;
+  margin: 1rem;
+  width: 2.5rem;
+}
+.hide {
+  display: none;
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  max-width: 14rem;
+}
+.container1 {
+  padding: 0 10px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+.img-mobile {
+  display: block;
+}
+.img-desktop {
+  display: none;
+}
+.container1 button {
+  margin-top: 1rem;
+  color: white;
+  background-color: #f15c51;
+  border: none;
+  padding: 1rem;
+  min-width: 11rem;
+  letter-spacing: 3px;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container1 button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+.container1 p {
+  color: hsl(236, 13%, 42%);
+}
+
+.container2 {
+  padding: 0 10px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  color: white;
+  margin-bottom: 4rem;
+}
+.container2__content {
+  padding: 0.5rem 1.5rem;
+  background-color: #02001b;
+}
+.container2 h1 {
+  color: hsl(35, 77%, 62%);
+}
+.container2 h2 {
+  transition: all 0.3s ease-in-out;
+}
+.container2 h2:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+.container2 p {
+  color: hsl(236, 13%, 42%);
+}
+.container3 {
+  padding: 0 10px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+.container3__article {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.container3__article img {
+  max-width: 8rem;
+  max-height: 10rem;
+}
+.container3__article__content * {
+  margin: 0;
+}
+.container3__article__content h1 {
+  color: #c4c3c9;
+}
+
+.container3__article__content h2 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.container3__article__content h2:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.container3__article__content p {
+  margin-top: 0.5rem;
+  color: hsl(236, 13%, 42%);
+}
+
+@media (min-width: 1024px) {
+  #main {
+    display: grid;
+    place-items: center;
+  }
+  .nav {
+    width: 1034px;
+  }
+  .nav__list {
+    display: block;
+  }
+  .nav__list ul {
+    display: inline-flex;
+    gap: 2.5rem;
+    color: hsl(236, 13%, 42%);
+  }
+  #btnOpen {
+    display: none;
+  }
+  .nav__list img {
+    display: none;
+  }
+  .container123 {
+    display: grid;
+    place-items: center;
+    max-width: 1024px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "container1 container1 container2"
+      "container3 container3 container3";
+  }
+  .container1 {
+    max-width: 800px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "img img"
+      "h1 pAndButton";
+    grid-area: container1;
+  }
+  .container1 img {
+    grid-area: img;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .img-desktop {
+    display: block;
+  }
+  .container1 h1 {
+    grid-area: h1;
+    margin-top: 1rem;
+    font-size: 2.8rem;
+  }
+  .container1 p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .container1 .pAndButton {
+    grid-area: pAndButton;
+  }
+  .container1 button {
+    margin: 0;
+  }
+  .container2 {
+    height: 100%;
+    min-width: 230px;
+    max-width: 400px;
+    grid-area: container2;
+  }
+  .container3 {
+    grid-area: container3;
+    padding: 0 10px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .container3__article {
+    display: grid;
+    grid-template-columns: 9rem auto;
+    margin-bottom: 0;
+  }
+
+  .container3__article__content p {
+    max-width: 16rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .nav {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    width: 1310px;
+  }
+  .nav img {
+    max-width: 5rem;
+  }
+  .nav__list li {
+    font-size: 1.4rem;
+  }
+  .container123 {
+    max-width: 1300px;
+  }
+  .container1 {
+    max-width: 1300px;
+  }
+  .container1 h1 {
+    font-size: 4rem;
+    max-width: 25rem;
+    line-height: 4rem;
+  }
+  .container1 h1,
+  .container1__pAndButton {
+    margin-top: 1.5rem;
+  }
+  .container1__pAndButton {
+    max-width: 23rem;
+    line-height: 1.5rem;
+  }
+  .container1__pAndButton p {
+    font-size: 1.2rem;
+  }
+  .container1__pAndButton button {
+    margin-top: 1rem;
+  }
+  .container2 {
+    padding: 0;
+    margin: 0;
+  }
+  .contianer2 h2 {
+    font-size: 2rem;
+  }
+  .container2 p {
+    font-size: 1.3rem;
+  }
+  .container2__content {
+    max-width: 370px;
+    height: 100%;
+  }
+  .container3 {
+    padding: 1rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+  }
+  .container3__article {
+    display: flex;
+    place-items: flex-end;
+  }
+  .container3__article img {
+    max-width: 8rem;
+    height: 100%;
+  }
+  .container3__article__content {
+    max-width: 10rem;
+  }
+
+  .container3__article__content h2 {
+    width: max-content;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .container3__article__content p {
+    margin-top: 0.5rem;
+    width: 150%;
+    font-size: 1.1rem;
+  }
+}
+
+.attribution {
+  margin-top: 6rem;
+}
