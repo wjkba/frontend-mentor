@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Heebo:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #1c2022;
+}
+#HEADER {
+  display: grid;
+  place-items: center;
+  background-color: #fafafa;
+  border-color: #dbe5e6;
+  border-style: solid none;
+  border-top: 1.5px;
+  color: #1c2022;
+  line-height: 24px;
+  margin-bottom: 4rem;
+}
+.header {
+  display: flex;
+  padding: 1rem;
+}
+.header img {
+  max-width: 15rem;
+}
+#PAGE {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 1rem;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+  /* background-color: pink; */
+}
+
+.card {
+  background-color: white;
+  border-color: #dbe5e6;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  color: #1c2022;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+}
+.card__image {
+  overflow: hidden;
+  margin: 0;
+}
+.card img {
+  object-fit: cover;
+  transition: transform 300ms ease 0ms;
+  width: 100%;
+  cursor: pointer;
+  max-width: 350px;
+  max-height: 250px;
+}
+.card img:hover {
+  transform: scale(1.05);
+}
+.card__text {
+  padding: 25px;
+  line-height: 24px;
+  text-align: left;
+}
+.barlow {
+  font-family: "Barlow", sans-serif;
+}
+.heebo {
+  font-family: "Heebo", sans-serif;
+}
+.title {
+  font-size: 24px;
+  color: #1c2022;
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+  border: medium;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  font-family: "Barlow", sans-serif;
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+  padding: 0;
+}
+.tags li {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+.html-tag {
+  color: #6abecd;
+}
+.description {
+  font-size: 14px;
+  color: #737373;
+  line-height: 1.5;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* GITHUB BUTTON */
+
+.button-container {
+  margin-top: 5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button-g {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-g:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-g:hover {
+  background-color: #2c974b;
+}
+
+.button-g:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-g:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+.button-g:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+.button-g2 {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-g2:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-g2:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.button-g2:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-g2:focus {
+  outline: 1px transparent;
+}
+
+.button-g2:before {
+  display: none;
+}
+
+.button-g2:-webkit-details-marker {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    width: 100%;
+    max-width: 1100px;
+  }
+  .header img {
+    min-width: 18rem;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 1200px;
+  }
+}
