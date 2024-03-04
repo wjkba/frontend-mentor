@@ -37,7 +37,7 @@ const cards = [
   {
     title: "FAQ accordion",
     image:
-      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1705487747%2FChallenges%2Fcf3rlsqoovxlf7uajpva.jpg&w=384&q=75",
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1701355650%2FChallenges%2Fnr04mhuzgpmuipedmqcc.jpg&w=384&q=75",
     live: "https://wjkba.github.io/frontend-mentor/faq-accordion/index.html",
     repo: "https://github.com/wjkba/frontend-mentor/tree/main/faq-accordion",
   },
