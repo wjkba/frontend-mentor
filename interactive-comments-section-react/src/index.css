@@ -1,0 +1,123 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  /* Primary */
+  --moderate-blue: hsl(238, 40%, 52%);
+  --soft-red: hsl(358, 79%, 66%);
+  --light-grayish-blue: hsl(239, 57%, 85%);
+  --pale-red: hsl(357, 100%, 86%);
+
+  /* Neutral */
+  --dark-blue: hsl(212, 24%, 26%);
+  --grayish-blue: hsl(211, 10%, 45%);
+  --light-gray: hsl(223, 19%, 93%);
+  --very-light-gray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+.grid-center {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-size: 16px;
+}
+.post {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  max-width: 46rem;
+}
+.post-reply--wrap {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  border-left: 2px solid var(--light-grayish-blue);
+  margin-left: 1rem;
+}
+.post-reply {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin: 0;
+  max-width: 43.5rem;
+}
+.post__top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.post__top :nth-child(2) {
+  font-weight: 500;
+}
+.post__top :nth-child(3) {
+  color: var(--grayish-blue);
+}
+.post__top img {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.post__text > p {
+  color: var(--grayish-blue);
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.post__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: var(--light-gray);
+  width: 100%;
+  max-width: 6rem;
+  max-height: 2.5rem;
+  border-radius: 0.8rem;
+}
+.likes button {
+  border: none;
+  background-color: transparent;
+  color: var(--moderate-blue);
+}
+.likes p {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+.reply {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.reply p {
+  color: var(--moderate-blue);
+  font-weight: 500;
+}
+.comment-form {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  max-width: 46rem;
+  width: 100%;
+}
+.comment-form textarea {
+  width: 100%;
+}
