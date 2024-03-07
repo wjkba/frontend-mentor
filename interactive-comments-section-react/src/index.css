@@ -93,6 +93,7 @@ body {
   border: none;
   background-color: transparent;
   color: var(--moderate-blue);
+  cursor: pointer;
 }
 .likes p {
   color: var(--dark-blue);

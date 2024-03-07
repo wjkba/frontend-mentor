@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CommentForm from "./CommentForm";
 import Reply from "./Reply";
 
@@ -17,6 +18,10 @@ function Comment({
 }) {
   const canEdit = currentUser === comment.user.username;
   const canDelete = currentUser === comment.user.username;
+  const [score, setScore] = useState(comment.score);
+  const [disablePlus, setDisablePlus] = useState(false);
+  const [disableMinus, setDisableMinus] = useState(false);
+  let initialScore = comment.score;
   const isReplying =
     activeComment &&
     activeComment.type === "replying" &&
@@ -26,6 +31,18 @@ function Comment({
     activeComment.type === "editing" &&
     activeComment.id === comment.id;
   const replyId = parentId ? parentId : comment.id;
+  const handleScoreChange = (type, score) => {
+    if (!disablePlus && type === "+") {
+      setScore((s) => s + 1);
+      setDisablePlus(true);
+      setDisableMinus(true);
+    }
+    if (!disableMinus && type === "-") {
+      setScore((s) => s - 1);
+      setDisablePlus(true);
+      setDisableMinus(true);
+    }
+  };
   return (
     <>
       <div className="post">
@@ -48,9 +65,19 @@ function Comment({
 
         <div className="post__bottom">
           <div className="likes">
-            <img src="./images/icon-minus.svg" alt="" />
-            <p>{comment.score}</p>
-            <img src="./images/icon-plus.svg" alt="" />
+            <button
+              onClick={() => handleScoreChange("-")}
+              disabled={disableMinus}
+            >
+              <img src="./images/icon-minus.svg" />
+            </button>
+            <p>{score}</p>
+            <button
+              onClick={() => handleScoreChange("+")}
+              disabled={disablePlus}
+            >
+              <img src="./images/icon-plus.svg" />
+            </button>
           </div>
           <button className="reply">
             {canDelete && (

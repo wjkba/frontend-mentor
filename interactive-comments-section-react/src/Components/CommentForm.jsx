@@ -8,7 +8,6 @@ function CommentForm({ handleSubmit, initialText = "" }) {
     handleSubmit(text);
     setText("");
   };
-  console.log(text);
   return (
     <>
       <form className="comment-form" onSubmit={onSubmit}>

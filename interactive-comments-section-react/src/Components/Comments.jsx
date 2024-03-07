@@ -48,17 +48,16 @@ function Comments({ currentUser }) {
     setActiveComment(null);
   };
   const updateReply = (text, commentId, parentId) => {
-    console.log("DOAKDO");
     let parentComment = comments.find((comment) => comment.id === parentId);
-    console.log(parentComment);
-    // const updatedComments = comments.map((comment) => {
-    //   if (comment.id === commentId) {
-    //     return { ...comment, content: text };
-    //   }
-    //   return comment;
-    // });
-    // setComments(updatedComments);
-    // setActiveComment(null);
+    const updatedReplies = parentComment.replies.map((reply) => {
+      if (reply.id === commentId) {
+        return { ...reply, content: text };
+      }
+      return reply;
+    });
+    parentComment.replies = updatedReplies;
+    setComments([...comments]);
+    setActiveComment(null);
   };
 
   //
@@ -116,7 +115,6 @@ function Comments({ currentUser }) {
   //
   return (
     <>
-      <button onClick={() => console.log(Data)}>LOG DATA</button>
       <div className="comments">
         {comments.map((comment) => (
           <>
