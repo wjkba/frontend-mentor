@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CommentForm({ handleSubmit, initialText = "" }) {
+function CommentForm({ handleSubmit, initialText = "", type = "SEND" }) {
   const [text, setText] = useState(initialText);
   const isTextAreaDisabled = text.length === 0;
   const onSubmit = (event) => {
@@ -15,7 +15,14 @@ function CommentForm({ handleSubmit, initialText = "" }) {
           value={text}
           onChange={(e) => setText(e.target.value)}
         ></textarea>
-        <button disabled={isTextAreaDisabled}>submit</button>
+        <div className="form__bottom">
+          <div>
+            {type === "SEND" && (
+              <img src="./images/avatars/image-juliusomo.webp" />
+            )}
+          </div>
+          <button disabled={isTextAreaDisabled}>{type}</button>
+        </div>
       </form>
     </>
   );

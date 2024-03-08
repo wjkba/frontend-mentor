@@ -96,7 +96,7 @@ body {
   cursor: pointer;
 }
 .likes p {
-  color: var(--dark-blue);
+  color: var(--moderate-blue);
   font-weight: 500;
 }
 .reply {
@@ -111,6 +111,26 @@ body {
   color: var(--moderate-blue);
   font-weight: 500;
 }
+.edit {
+  color: var(--moderate-blue);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+.delete {
+  color: var(--soft-red);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+.bottom__buttons {
+  display: flex;
+  gap: 1rem;
+}
 .comment-form {
   background-color: white;
   margin: 0.5rem;
@@ -121,4 +141,20 @@ body {
 }
 .comment-form textarea {
   width: 100%;
+}
+.comment-form img {
+  max-width: 2.5rem;
+}
+.comment-form button {
+  background-color: var(--moderate-blue);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+}
+.form__bottom {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

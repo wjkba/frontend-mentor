@@ -60,54 +60,69 @@ function Comment({
           <CommentForm
             initialText={comment.content}
             handleSubmit={(text) => updateComment(text, comment.id)}
+            type="UPDATE"
           />
         )}
 
         <div className="post__bottom">
           <div className="likes">
             <button
-              onClick={() => handleScoreChange("-")}
-              disabled={disableMinus}
-            >
-              <img src="./images/icon-minus.svg" />
-            </button>
-            <p>{score}</p>
-            <button
               onClick={() => handleScoreChange("+")}
               disabled={disablePlus}
             >
               <img src="./images/icon-plus.svg" />
             </button>
+            <p>{score}</p>
+
+            <button
+              onClick={() => handleScoreChange("-")}
+              disabled={disableMinus}
+            >
+              <img src="./images/icon-minus.svg" />
+            </button>
           </div>
-          <button className="reply">
+
+          <div className="bottom__buttons">
             {canDelete && (
-              <p onClick={() => deleteComment(comment.id)}>Delete</p>
+              <div className="delete" onClick={() => deleteComment(comment.id)}>
+                <img src="./images/icon-delete.svg"></img>
+                <p>Delete</p>
+              </div>
             )}
             {canEdit && (
-              <p
-                onClick={() =>
-                  setActiveComment({ id: comment.id, type: "editing" })
-                }
+              <div
+                className="edit"
+                style={{ display: "flex", alignItems: "center" }}
+                onClick={() => {
+                  setActiveComment({ id: comment.id, type: "editing" });
+                }}
               >
-                Edit
-              </p>
+                <div>
+                  <img src="./images/icon-edit.svg" alt="" />
+                </div>
+                <p>Edit</p>
+              </div>
             )}
-            <div>
-              <img src="./images/icon-reply.svg" alt="" />
-            </div>
 
-            <p
+            <div
+              className="reply"
               onClick={() =>
                 setActiveComment({ id: comment.id, type: "replying" })
               }
             >
-              Reply
-            </p>
-          </button>
+              <div>
+                <img src="./images/icon-reply.svg" alt="" />
+              </div>
+              <p>Reply</p>
+            </div>
+          </div>
         </div>
       </div>
       {isReplying && (
-        <CommentForm handleSubmit={(text) => addReply(text, replyId)} />
+        <CommentForm
+          handleSubmit={(text) => addReply(text, replyId)}
+          type="REPLY"
+        />
       )}
       {replies.length > 0 && (
         <div className="replies">
