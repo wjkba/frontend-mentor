@@ -1,5 +1,12 @@
 const cards = [
   {
+    title: "Interactive comments section",
+    image:
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1639765609%2FChallenges%2Fi8zblmqsbqixz1tbhc0v.jpg&w=828&q=75",
+    live: "https://chimerical-truffle-5da2d3.netlify.app/",
+    repo: "https://github.com/wjkba/frontend-mentor/tree/main/interactive-comments-section-react",
+  },
+  {
     title: "E-commerce product page",
     image:
       "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1633619397%2FChallenges%2Ffhzpdnabrek50hvhftnl.jpg&w=384&q=75",
