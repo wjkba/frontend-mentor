@@ -10,19 +10,27 @@ function CommentForm({ handleSubmit, initialText = "", type = "SEND" }) {
   };
   return (
     <>
-      <form className="comment-form" onSubmit={onSubmit}>
+      <form
+        className={type === "UPDATE" ? "comment-form2" : "comment-form"}
+        onSubmit={onSubmit}
+      >
         <textarea
+          placeholder={type === "SEND" ? "Add a comment..." : ""}
           value={text}
           onChange={(e) => setText(e.target.value)}
         ></textarea>
-        <div className="form__bottom">
-          <div>
-            {type === "SEND" && (
-              <img src="./images/avatars/image-juliusomo.webp" />
-            )}
-          </div>
+        {/* <div className="form__bottom"> */}
+        <div className="avatar-wrap">
+          {type === "UPDATE" ? (
+            ""
+          ) : (
+            <img src="./images/avatars/image-juliusomo.webp" />
+          )}
+        </div>
+        <div className="send-wrap">
           <button disabled={isTextAreaDisabled}>{type}</button>
         </div>
+        {/* </div> */}
       </form>
     </>
   );

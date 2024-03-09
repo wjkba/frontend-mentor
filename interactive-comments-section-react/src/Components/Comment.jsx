@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CommentForm from "./CommentForm";
 import Reply from "./Reply";
 
@@ -16,6 +16,17 @@ function Comment({
   updateComment,
   updateReply,
 }) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const canEdit = currentUser === comment.user.username;
   const canDelete = currentUser === comment.user.username;
   const [score, setScore] = useState(comment.score);
@@ -43,12 +54,25 @@ function Comment({
       setDisableMinus(true);
     }
   };
+
   return (
     <>
       <div className="post">
         <div className="post__top">
           <img src={comment.user.image.webp} alt="" />
           <p>{comment.user.username}</p>
+          {currentUser === comment.user.username && (
+            <span
+              style={{
+                backgroundColor: "#5457B6",
+                color: "white",
+                padding: "0.1rem 0.4rem",
+                borderRadius: "0.3rem",
+              }}
+            >
+              you
+            </span>
+          )}
           <p>{comment.createdAt}</p>
         </div>
         {!isEditing && (
@@ -64,7 +88,8 @@ function Comment({
           />
         )}
 
-        <div className="post__bottom">
+        {/* <div className="post__bottom"> */}
+        <div className="likes-wrap">
           <div className="likes">
             <button
               onClick={() => handleScoreChange("+")}
@@ -81,42 +106,43 @@ function Comment({
               <img src="./images/icon-minus.svg" />
             </button>
           </div>
+        </div>
 
-          <div className="bottom__buttons">
-            {canDelete && (
-              <div className="delete" onClick={() => deleteComment(comment.id)}>
-                <img src="./images/icon-delete.svg"></img>
-                <p>Delete</p>
-              </div>
-            )}
-            {canEdit && (
-              <div
-                className="edit"
-                style={{ display: "flex", alignItems: "center" }}
-                onClick={() => {
-                  setActiveComment({ id: comment.id, type: "editing" });
-                }}
-              >
-                <div>
-                  <img src="./images/icon-edit.svg" alt="" />
-                </div>
-                <p>Edit</p>
-              </div>
-            )}
-
+        <div className="bottom__buttons">
+          {canDelete && (
+            <div className="delete" onClick={() => deleteComment(comment.id)}>
+              <img src="./images/icon-delete.svg"></img>
+              <p>Delete</p>
+            </div>
+          )}
+          {canEdit && (
             <div
-              className="reply"
-              onClick={() =>
-                setActiveComment({ id: comment.id, type: "replying" })
-              }
+              className="edit"
+              style={{ display: "flex", alignItems: "center" }}
+              onClick={() => {
+                setActiveComment({ id: comment.id, type: "editing" });
+              }}
             >
               <div>
-                <img src="./images/icon-reply.svg" alt="" />
+                <img src="./images/icon-edit.svg" alt="" />
               </div>
-              <p>Reply</p>
+              <p>Edit</p>
             </div>
+          )}
+
+          <div
+            className="reply"
+            onClick={() =>
+              setActiveComment({ id: comment.id, type: "replying" })
+            }
+          >
+            <div>
+              <img src="./images/icon-reply.svg" alt="" />
+            </div>
+            <p>Reply</p>
           </div>
         </div>
+        {/* </div> */}
       </div>
       {isReplying && (
         <CommentForm
