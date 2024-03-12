@@ -21,6 +21,13 @@ const cards = [
     repo: "https://github.com/wjkba/frontend-mentor/tree/main/pricing-component-with-toggle",
   },
   {
+    title: "Interactive card details form",
+    image:
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1659629965%2FChallenges%2Fu57dcsnhvoalnixjt6kb.jpg&w=384&q=75",
+    live: "https://65f09c65c4066c26059e4464--monumental-platypus-54d745.netlify.app/",
+    repo: "https://github.com/wjkba/frontend-mentor/tree/main/interactive-card-details-form-react",
+  },
+  {
     title: "News homepage",
     image:
       "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1666363466%2FChallenges%2Fabbzt6kmkawmpbj7evxx.jpg&w=384&q=75",
@@ -48,13 +55,7 @@ const cards = [
     live: "https://wjkba.github.io/frontend-mentor/faq-accordion/index.html",
     repo: "https://github.com/wjkba/frontend-mentor/tree/main/faq-accordion",
   },
-  {
-    title: "Interactive card details form",
-    image:
-      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1659629965%2FChallenges%2Fu57dcsnhvoalnixjt6kb.jpg&w=384&q=75",
-    live: "https://wjkba.github.io/frontend-mentor/interactive-card-details-form/index.html",
-    repo: "https://github.com/wjkba/frontend-mentor/tree/main/interactive-card-details-form",
-  },
+
   {
     title: "Blog preview card",
     image:
