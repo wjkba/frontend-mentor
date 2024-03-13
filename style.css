@@ -18,7 +18,8 @@ body {
 }
 .header {
   display: flex;
-  padding: 1rem;
+
+  padding: 1rem 0rem;
 }
 .header img {
   max-width: 15rem;

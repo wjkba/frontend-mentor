@@ -59,7 +59,7 @@ const cards = [
   {
     title: "Blog preview card",
     image:
-      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1701355650%2FChallenges%2Fnr04mhuzgpmuipedmqcc.jpg&w=384&q=75",
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1703155602%2FChallenges%2Fcmab9xsatnq8m04w5ikl.jpg&w=384&q=75",
     live: "https://wjkba.github.io/frontend-mentor/blog-preview-card/index.html",
     repo: "https://github.com/wjkba/frontend-mentor/tree/main/blog-preview-card",
   },
