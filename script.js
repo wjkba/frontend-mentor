@@ -1,5 +1,12 @@
 const cards = [
   {
+    title: "Job listings with filtering",
+    image:
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1652197925%2FChallenges%2Fvhouwacmyw27vhcvq8zm.jpg&w=384&q=75",
+    live: "https://astounding-arithmetic-121c0f.netlify.app/",
+    repo: "https://github.com/wjkba/frontend-mentor/tree/main/static-job-listings-react",
+  },
+  {
     title: "Interactive comments section",
     image:
       "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1639765609%2FChallenges%2Fi8zblmqsbqixz1tbhc0v.jpg&w=828&q=75",
