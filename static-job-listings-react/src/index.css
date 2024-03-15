@@ -1,0 +1,238 @@
+:root {
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --light-grayish-cyan-background: hsl(180, 52%, 96%);
+  --light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+body {
+  background-color: var(--light-grayish-cyan-background);
+  font-size: 15px;
+}
+main {
+  display: grid;
+  place-items: center;
+}
+.background {
+  width: 100%;
+  min-height: 8rem;
+  background-image: url("/images/bg-header-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--desaturated-dark-cyan);
+}
+
+.filter-bar {
+  background-color: white;
+  width: 100%;
+  max-width: 270px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  transform: translateY(-2rem);
+}
+.filter-bar button {
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--dark-grayish-cyan);
+  cursor: pointer;
+  max-width: 4rem;
+  margin-right: 1.2rem;
+}
+.filter-bar button:hover {
+  text-decoration: underline;
+  color: var(--desaturated-dark-cyan);
+}
+.filter-bar__tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+.filter-tag {
+  color: var(--desaturated-dark-cyan);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  max-height: 1.5rem;
+  min-width: 2rem;
+  background-color: var(--light-grayish-cyan-filter-tablets);
+  border-radius: 0.2rem;
+}
+.filter-tag p {
+  margin: 0;
+  padding: 0.4rem;
+}
+.close-wrap {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1/1;
+  height: 100%;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  background-color: var(--desaturated-dark-cyan);
+  cursor: pointer;
+  transition: ease 500ms;
+}
+.close-wrap:hover {
+  background-color: black;
+}
+.close-wrap img {
+  max-width: 0.7rem;
+}
+
+.offers {
+  max-width: 270px;
+  margin-top: 2rem;
+}
+
+.offer {
+  margin-top: 2rem;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  border-left: 4px solid white;
+  border-radius: 0.4rem;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.offer--featured {
+  border-left: 4px solid var(--desaturated-dark-cyan);
+}
+
+.offer__info img {
+  max-width: 2.5rem;
+  display: block;
+  position: absolute;
+  transform: translateY(-2rem);
+}
+
+.company-wrap {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0.4rem;
+  max-height: 1.2rem;
+  border-radius: 0.8rem;
+}
+.highlight p {
+  margin: 0;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+.new {
+  background-color: var(--desaturated-dark-cyan);
+}
+.featured {
+  background-color: black;
+}
+.info__content > p:hover {
+  color: var(--desaturated-dark-cyan);
+  cursor: pointer;
+}
+.info__company {
+  margin: 0;
+  color: var(--desaturated-dark-cyan);
+  font-weight: 500;
+}
+.info__position {
+  margin: 0;
+  margin-top: 0.6rem;
+  color: var(--very-dark-grayish-cyan);
+  font-weight: 700;
+}
+.info__details {
+  margin: 0;
+  margin-top: 0.5rem;
+  height: fit-content;
+  display: flex;
+  color: var(--dark-grayish-cyan);
+  gap: 0.5rem;
+}
+.info__details p {
+  margin: 0;
+}
+.offer__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  color: var(--desaturated-dark-cyan);
+  background-color: var(--light-grayish-cyan-filter-tablets);
+  padding: 0.4rem;
+  margin: 0.2rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.tag:hover {
+  background-color: var(--desaturated-dark-cyan);
+  color: white;
+  transition: ease 500ms;
+}
+
+@media (min-width: 400px) {
+  .filter-bar {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .background {
+    background-image: url("/images/bg-header-desktop.svg");
+  }
+  .filter-bar {
+    max-width: 900px;
+  }
+  .offers {
+    width: 100%;
+    max-width: 900px;
+  }
+  .offer__info img {
+    max-width: 4rem;
+    display: block;
+    position: initial;
+    transform: initial;
+  }
+  .info__img {
+    display: grid;
+    place-items: center;
+  }
+  .offer__info {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .offer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .offer__tags {
+    align-items: center;
+  }
+  .highlight {
+    min-height: 1.4rem;
+  }
+  .highlight p {
+    font-size: 0.7rem;
+  }
+  .info__content > p {
+    font-size: 1.15rem;
+  }
+}
