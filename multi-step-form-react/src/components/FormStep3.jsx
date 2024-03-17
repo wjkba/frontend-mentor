@@ -19,7 +19,11 @@ function FormStep3({ isMonthly, addons, setAddons }) {
               <p>Access to multiplayer games</p>
             </div>
           </div>
-          {isMonthly ? <p>+1/mo</p> : <p>+10/yr</p>}
+          {isMonthly ? (
+            <p className="step3-price">+1/mo</p>
+          ) : (
+            <p className="step3-price">+10/yr</p>
+          )}
         </div>
         <div
           onClick={() => setAddons([addons[0], !addons[1], addons[2]])}
@@ -30,15 +34,17 @@ function FormStep3({ isMonthly, addons, setAddons }) {
               checked={addons[1]}
               onChange={() => setAddons([addons[0], !addons[1], addons[2]])}
               type="checkbox"
-              name=""
-              id=""
             />
             <div>
               <p>Larger storage</p>
               <p>Extra 1TB of cloud save</p>
             </div>
           </div>
-          {isMonthly ? <p>+2/mo</p> : <p>+20/yr</p>}
+          {isMonthly ? (
+            <p className="step3-price">+2/mo</p>
+          ) : (
+            <p className="step3-price">+20/yr</p>
+          )}
         </div>
         <div
           onClick={() => setAddons([addons[0], addons[1], !addons[2]])}
@@ -49,15 +55,17 @@ function FormStep3({ isMonthly, addons, setAddons }) {
               checked={addons[2]}
               onChange={() => setAddons([addons[0], addons[1], !addons[2]])}
               type="checkbox"
-              name=""
-              id=""
             />
             <div>
               <p>Customizable profile</p>
               <p>Custom theme on your profile</p>
             </div>
           </div>
-          {isMonthly ? <p>+2/mo</p> : <p>+20/yr</p>}
+          {isMonthly ? (
+            <p className="step3-price">+2/mo</p>
+          ) : (
+            <p className="step3-price">+20/yr</p>
+          )}
         </div>
       </div>
     </div>

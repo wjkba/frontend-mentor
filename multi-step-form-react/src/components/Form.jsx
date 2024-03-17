@@ -9,7 +9,7 @@ function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [currentStep, setCurrentStep] = useState(5);
+  const [currentStep, setCurrentStep] = useState(1);
   const [selectedPlan, setSelectedPlan] = useState(1);
   const [isMonthly, setIsMonthly] = useState(true);
   const [addons, setAddons] = useState([false, false, false]);
@@ -89,6 +89,10 @@ function Form() {
           >
             1
           </div>
+          <div className="route__info">
+            <p>STEP 1</p>
+            <p>YOUR INFO</p>
+          </div>
         </div>
         <div onClick={() => handleStepChange(2)} className="route">
           <div
@@ -99,6 +103,10 @@ function Form() {
             }
           >
             2
+          </div>
+          <div className="route__info">
+            <p>STEP 2</p>
+            <p>SELECT PLAN</p>
           </div>
         </div>
         <div onClick={() => handleStepChange(3)} className="route">
@@ -111,6 +119,10 @@ function Form() {
           >
             3
           </div>
+          <div className="route__info">
+            <p>STEP 3</p>
+            <p>ADD-ONS</p>
+          </div>
         </div>
         <div onClick={() => handleStepChange(4)} className="route">
           <div
@@ -122,56 +134,66 @@ function Form() {
           >
             4
           </div>
+          <div className="route__info">
+            <p>STEP 4</p>
+            <p>SUMMARY</p>
+          </div>
         </div>
       </div>
 
-      <div className="form__window">
-        {currentStep === 1 && (
-          <FormStep1
-            name={name}
-            setName={setName}
-            email={email}
-            setEmail={setEmail}
-            phone={phone}
-            setPhone={setPhone}
-          />
-        )}
-        {currentStep === 2 && (
-          <FormStep2
-            selectedPlan={selectedPlan}
-            setSelectedPlan={setSelectedPlan}
-            isMonthly={isMonthly}
-            setIsMonthly={setIsMonthly}
-          />
-        )}
-        {currentStep === 3 && (
-          <FormStep3
-            addons={addons}
-            setAddons={setAddons}
-            isMonthly={isMonthly}
-          />
-        )}
-        {currentStep === 4 && (
-          <FormStep4
-            selectedPlan={selectedPlan}
-            isMonthly={isMonthly}
-            addons={addons}
-            setCurrentStep={setCurrentStep}
-          />
-        )}
-        {currentStep === 5 && <FormStep5 />}
-      </div>
+      <div className="form-window-buttons">
+        <div className="form__window">
+          {currentStep === 1 && (
+            <FormStep1
+              name={name}
+              setName={setName}
+              email={email}
+              setEmail={setEmail}
+              phone={phone}
+              setPhone={setPhone}
+            />
+          )}
+          {currentStep === 2 && (
+            <FormStep2
+              selectedPlan={selectedPlan}
+              setSelectedPlan={setSelectedPlan}
+              isMonthly={isMonthly}
+              setIsMonthly={setIsMonthly}
+            />
+          )}
+          {currentStep === 3 && (
+            <FormStep3
+              addons={addons}
+              setAddons={setAddons}
+              isMonthly={isMonthly}
+            />
+          )}
+          {currentStep === 4 && (
+            <FormStep4
+              selectedPlan={selectedPlan}
+              isMonthly={isMonthly}
+              addons={addons}
+              setCurrentStep={setCurrentStep}
+            />
+          )}
+          {currentStep === 5 && <FormStep5 />}
+        </div>
 
-      <div className="form__buttons">
-        <button onClick={handleGoBack} className="btn-back">
-          Go Back
-        </button>
-        <button
-          onClick={handleNextStep}
-          className={!(currentStep === 4) ? "btn-next" : "btn-confirm"}
-        >
-          {!(currentStep === 4) ? "Next Step" : "Confirm"}
-        </button>
+        <div className="form__buttons">
+          {!(currentStep === 5) && (
+            <button onClick={handleGoBack} className="btn-back">
+              Go Back
+            </button>
+          )}
+          {!(currentStep === 5) && (
+            <button
+              onClick={handleNextStep}
+              className={!(currentStep === 4) ? "btn-next" : "btn-confirm"}
+            >
+              {!(currentStep === 4) ? "Next Step" : "Confirm"}
+            </button>
+          )}
+        </div>
       </div>
     </form>
   );

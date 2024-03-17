@@ -4,7 +4,7 @@ function FormStep4({ selectedPlan, addons, isMonthly, setCurrentStep }) {
       id: 1,
       name: "Arcade",
       priceM: 9,
-      priceY: 990,
+      priceY: 90,
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ function FormStep4({ selectedPlan, addons, isMonthly, setCurrentStep }) {
                 : `${selectedPlanName} (Yearly)`}
             </p>
             <p onClick={() => setCurrentStep(2)} className="plan__change">
-              Change
+              <u>Change</u>
             </p>
           </div>
           <p className="plan__price">
