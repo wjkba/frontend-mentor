@@ -1,5 +1,12 @@
 const cards = [
   {
+    title: "Multi-step form",
+    image:
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1676299214%2FChallenges%2Flpwvfibpdyycvjpukkec.jpg&w=384&q=75",
+    live: "https://luxury-baklava-c7cf22.netlify.app/",
+    repo: "https://github.com/wjkba/frontend-mentor/tree/main/multi-step-form-react",
+  },
+  {
     title: "Job listings with filtering",
     image:
       "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1652197925%2FChallenges%2Fvhouwacmyw27vhcvq8zm.jpg&w=384&q=75",
