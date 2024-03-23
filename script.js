@@ -28,6 +28,13 @@ const cards = [
     repo: "https://github.com/wjkba/frontend-mentor/tree/main/ecommerce-product-page-react",
   },
   {
+    title: "Bookmark landing page",
+    image:
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1561024650%2FChallenges%2Fhwi1ergmy7tibqa5bvyf.jpg&w=384&q=75",
+    live: "https://stalwart-brigadeiros-863aa2.netlify.app/",
+    repo: "https://github.com/wjkba/frontend-mentor/tree/main/bookmark-landing-page-react",
+  },
+  {
     title: "Pricing component with toggle",
     image:
       "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1575037683%2FChallenges%2Fsjsrx7m77v6pxswdm0mx.jpg&w=384&q=75",
