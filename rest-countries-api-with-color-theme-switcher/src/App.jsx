@@ -17,8 +17,9 @@ function App() {
         - napraw darkmode w country (cos nie tak z body lepiej skorzystaj z
         czegos innego, nie z klasy)
       </p>
-      <p> - css country</p>
-      <p> - ikonki buttony, darkomde i back</p>
+
+      <p> - loading</p>
+      <p> - api</p>
       <p> - custom dropdown</p>
       <Navbar toggleDarkMode={toggleDarkMode} />
       <CountriesList />

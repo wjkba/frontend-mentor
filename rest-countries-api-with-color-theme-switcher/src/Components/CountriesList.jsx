@@ -52,6 +52,7 @@ function CountriesList() {
     <>
       <div className="search-filters">
         <div className="search">
+          <i className="fa-solid fa-magnifying-glass"></i>
           <input
             onChange={handleCountrySearch}
             value={countrySearch}

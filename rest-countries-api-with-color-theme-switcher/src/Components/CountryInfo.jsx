@@ -21,7 +21,8 @@ export default function CountryInfo() {
     <>
       <Navbar />
       <button className="back-btn" onClick={() => navigate(-1)}>
-        Back
+        <i class="fa-solid fa-arrow-left"></i>
+        <p>Back</p>
       </button>
       <div className="grid-center">
         <div className="country">
@@ -50,46 +51,48 @@ export default function CountryInfo() {
               <b>Capital: </b>
               <span>{country.capital}</span>
             </p>
-            <p>
-              <b>Top Level Domain: </b>
-              <span>{country.topLevelDomain}</span>
-            </p>
-            <p>
-              <b>Currencies: </b>
-              {country.currencies.map((item, id) => (
-                <span key={id}>
-                  {item.name}
-                  {id !== country.languages.length - 1 && ", "}
-                </span>
-              ))}
-            </p>
-            <p>
-              <b>Languages: </b>
-              {country.languages.map((item, id) => (
-                <span key={id}>
-                  {item.name}
-                  {id !== country.languages.length - 1 && ", "}
-                </span>
-              ))}
-            </p>
-          </div>
-          <div className="country-border-countries">
-            {borderCodes.length > 0 && (
+            <div style={{ marginTop: "2.5rem" }}>
               <p>
-                <b>Border Countries:</b>
+                <b>Top Level Domain: </b>
+                <span>{country.topLevelDomain}</span>
               </p>
-            )}
-            <div className="border-countries">
-              {borderCodes.length > 0 &&
-                borderCountries.map((item, id) => (
-                  <Link
-                    key={id}
-                    to={`/countries/${item.id}`}
-                    className="border-country"
-                  >
+              <p>
+                <b>Currencies: </b>
+                {country.currencies.map((item, id) => (
+                  <span key={id}>
                     {item.name}
-                  </Link>
+                    {id !== country.languages.length - 1 && ", "}
+                  </span>
                 ))}
+              </p>
+              <p>
+                <b>Languages: </b>
+                {country.languages.map((item, id) => (
+                  <span key={id}>
+                    {item.name}
+                    {id !== country.languages.length - 1 && ", "}
+                  </span>
+                ))}
+              </p>
+            </div>
+            <div className="country-border-countries">
+              {borderCodes.length > 0 && (
+                <p>
+                  <b>Border Countries:</b>
+                </p>
+              )}
+              <div className="border-countries">
+                {borderCodes.length > 0 &&
+                  borderCountries.map((item, id) => (
+                    <Link
+                      key={id}
+                      to={`/countries/${item.id}`}
+                      className="border-country"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+              </div>
             </div>
           </div>
         </div>

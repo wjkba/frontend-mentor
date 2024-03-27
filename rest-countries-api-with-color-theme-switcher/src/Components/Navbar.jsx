@@ -7,6 +7,7 @@ function Navbar({ toggleDarkMode }) {
         <Link to="/">Where in the world</Link>
       </p>
       <button className="mode-btn" onClick={toggleDarkMode}>
+        <i className="fa-solid fa-moon"></i>
         <p>Dark Mode</p>
       </button>
     </div>
