@@ -1,6 +1,7 @@
 import CountryCard from "./CountryCard";
 import data from "../data.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function CountriesList() {
   const [selectedCountries, setSelectedCountries] = useState(data);
   const [countrySearch, setCountrySearch] = useState("");
@@ -50,30 +51,32 @@ function CountriesList() {
 
   return (
     <>
-      <div className="search-filters">
-        <div className="search">
-          <i className="fa-solid fa-magnifying-glass"></i>
-          <input
-            onChange={handleCountrySearch}
-            value={countrySearch}
-            placeholder="Search for a country..."
-            type="text"
-            name=""
-            id=""
-          />
-        </div>
-        <div className="filters">
-          <select onChange={handleFilterChange}>
-            <option hidden disabled>
-              Filter by Region
-            </option>
-            <option value="All">All</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+      <div className="search-filters-wrapper">
+        <div className="search-filters">
+          <div className="search">
+            <i className="fa-solid fa-magnifying-glass"></i>
+            <input
+              onChange={handleCountrySearch}
+              value={countrySearch}
+              placeholder="Search for a country..."
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div className="filters">
+            <select onChange={handleFilterChange}>
+              <option hidden disabled>
+                Filter by Region
+              </option>
+              <option value="All">All</option>
+              <option value="Africa">Africa</option>
+              <option value="Americas">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
         </div>
       </div>
 

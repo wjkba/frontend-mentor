@@ -1,26 +1,15 @@
-import { useState } from "react";
-
 import "./App.css";
 import "./normal.css";
+import { useState, useContext } from "react";
 import Navbar from "./Components/Navbar";
 import CountriesList from "./Components/CountriesList";
+import { ThemeContext } from "./Components/ThemeContext";
 
 function App() {
-  const toggleDarkMode = () => {
-    const body = document.querySelector("body");
-    body.classList.toggle("dark");
-  };
+  const { isDark, toggleDarkMode } = useContext(ThemeContext);
 
   return (
-    <div>
-      <p>
-        - napraw darkmode w country (cos nie tak z body lepiej skorzystaj z
-        czegos innego, nie z klasy)
-      </p>
-
-      <p> - loading</p>
-      <p> - api</p>
-      <p> - custom dropdown</p>
+    <div data-theme={isDark ? "dark" : "light"}>
       <Navbar toggleDarkMode={toggleDarkMode} />
       <CountriesList />
     </div>
