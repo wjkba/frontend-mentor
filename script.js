@@ -14,6 +14,14 @@ const cards = [
     repo: "https://github.com/wjkba/frontend-mentor/tree/main/static-job-listings-react",
   },
   {
+    title: "Countries with color theme switcher",
+    image:
+      "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1554826345%2FChallenges%2Fyhq5ihanseyinzwblaw1.jpg&w=384&q=75",
+    live: "https://fanciful-daifuku-ed17b4.netlify.app/",
+    repo: "https://github.com/wjkba/frontend-mentor/tree/main/rest-countries-api-with-color-theme-switcher",
+  },
+
+  {
     title: "Interactive comments section",
     image:
       "https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1639765609%2FChallenges%2Fi8zblmqsbqixz1tbhc0v.jpg&w=828&q=75",
