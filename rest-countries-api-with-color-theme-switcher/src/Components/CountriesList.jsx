@@ -50,7 +50,7 @@ function CountriesList() {
   };
 
   return (
-    <>
+    <div className="countries-list-page">
       <div className="search-filters-wrapper">
         <div className="search-filters">
           <div className="search">
@@ -96,7 +96,7 @@ function CountriesList() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 export default CountriesList;
