@@ -1,9 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Heebo:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
 }
 body {
   color: #1c2022;
+}
+p,
+h1,
+h2,
+a {
+  font-family: "Barlow", sans-serif;
 }
 #HEADER {
   display: grid;
@@ -17,9 +23,34 @@ body {
   margin-bottom: 4rem;
 }
 .header {
+  width: 85%;
   display: flex;
-
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 0rem;
+}
+.header__github {
+  color: #1c2022;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.header__github a {
+  color: #1c2022;
+  text-decoration: none;
+}
+.header__github:hover a {
+  text-decoration: underline;
+}
+.header__github a {
+  margin: 0;
+  font-weight: 400;
+}
+.header__image {
+  display: flex;
+  align-items: center;
 }
 .header img {
   max-width: 15rem;
@@ -40,14 +71,15 @@ body {
 }
 
 .card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15rem 1fr;
   background-color: white;
   border-color: #dbe5e6;
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
   color: #1c2022;
-  display: flex;
-  flex-direction: column;
   width: 350px;
   height: 450px;
 }
@@ -67,6 +99,9 @@ body {
   transform: scale(1.05);
 }
 .card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 25px;
   line-height: 24px;
   text-align: left;
@@ -114,7 +149,6 @@ body {
 /* GITHUB BUTTON */
 
 .button-container {
-  margin-top: 5rem;
   display: flex;
   gap: 0.5rem;
 }
@@ -230,13 +264,24 @@ body {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 450px) {
+  .card {
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    grid-template-rows: 1fr 1fr;
+  }
+  .card__text {
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 1150px) {
   .header {
     width: 100%;
     max-width: 1100px;
   }
   .header img {
-    min-width: 18rem;
+    min-width: 14rem;
   }
   .cards-container {
     display: grid;
